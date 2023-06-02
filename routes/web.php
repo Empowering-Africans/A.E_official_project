@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\BuyingController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SalesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,14 +21,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+ # For the Auth process
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+ # Editing the profile of a user
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+Route::get('/products', [ProductsController::class, 'index'])->name('products');
+Route::get('/sales', [SalesController::class, 'index'])->name('sales');
+Route::get('/available', [BuyingController::class, 'index'])->name('available');
+
+# For the features of the web application
+// Route::resources([
+//     'products', ProductsController::class,
+//     'sales', SalesController::class,
+//     'available', BuyingController::class
+// ]);
+
 
 require __DIR__.'/auth.php';
