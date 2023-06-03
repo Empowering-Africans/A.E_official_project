@@ -22,7 +22,7 @@
                         {{ __('Sold products') }}
                     </x-nav-link>
                     <x-nav-link :href="route('available')" :active="request()->routeIs('available')">
-                        {{ __('Avalable products') }}
+                        {{ __('Avalable products for sale') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -43,6 +43,18 @@
                     </x-slot>
 
                     <x-slot name="content">
+                        <x-dropdown-link :href="route('dashboard')">
+                            {{ __('Dashboard') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('products')">
+                            {{ __('My products') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('sales')">
+                            {{ __('Sold products') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('available')">
+                            {{ __('Available products for sale') }}
+                        </x-dropdown-link>
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
@@ -86,7 +98,7 @@
                 {{ __('Sold Products') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('available')" :active="request()->routeIs('dashboard')">
-                {{ __('Available products') }}
+                {{ __('Available products for sale') }}
             </x-responsive-nav-link>
         </div>
 
