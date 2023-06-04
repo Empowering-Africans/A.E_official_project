@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BuyingController;
+use App\Http\Controllers\FallbackController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SalesController;
@@ -44,6 +45,11 @@ Route::get('/available', [BuyingController::class, 'index'])->name('available');
 //     'sales', SalesController::class,
 //     'available', BuyingController::class
 // ]);
+
+
+
+
+Route::fallback( [FallbackController::class, '__invoke']);
 
 
 require __DIR__.'/auth.php';
