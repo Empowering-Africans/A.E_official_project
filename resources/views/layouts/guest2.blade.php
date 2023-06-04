@@ -30,13 +30,7 @@
         " >
         
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 ">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                </a>
-            </div><br>
 
-            <b> <h1 style="font-size: 30px;"> Welcome to Alpha and Echo's Project</h1> </b>
 
             <div class="w-full sm:max-w-md mt-6 px-6 py-4  shadow-md bg-white-900 overflow-hidden text-black-500 sm:rounded-lg">
                 {{ $slot }}
