@@ -17,33 +17,36 @@
     </head>
     <body class="font-sans antialiased">
         <div
-         style="background: url('img/preservingFoods.jpg') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;  
-        height: 100%;
-        width: 100%;
-        " >
+                style="background: url('img/preservingFoods.jpg') no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;  
+                height: 100%;
+                width: 100%;
+                " >
        
 
-        <div class="min-h-screen  dark:bg-gray-900">
-            @include('layouts.navigation')
+                <div class="min-h-screen  dark:bg-gray-900">
+                    @include('layouts.navigation')
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+                    <!-- Page Heading -->
+                    @if (isset($header))
+                        <header class="bg-white dark:bg-gray-800 shadow">
+                            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                                {{ $header }}
+                            </div>
+                        </header>
+                    @endif
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+                    <!-- Page Content -->
+                    <main>
+                        {{ $slot }}
+                    </main>
+                </div>
         </div>
-        </div>
+
+        @include('layouts.footer')
+
     </body>
 </html>

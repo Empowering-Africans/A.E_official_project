@@ -3,7 +3,30 @@
         
             <b> <h2 style="font-size: 2rem; color: white;">
                 {{ Auth::user()->name }}'s {{ __('Dashboard') }}
-            </h2></b>
+            </h2></b> <br>
+
+            
+            <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
+                <div>
+                    <img src="/img/drone.jpg" width="400" alt="drone and land image">
+                </div>
+
+                <div class="m-auto sm:m-auto text-left w-4/5 block">
+                    <h2 class="text-4xl font-extrabold text-gray-600">
+                        Struggling to be a better developer?
+                    </h2>
+
+                    <p class="py-8 text-gray-500 text-l">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                         Voluptatibus
+                    </p>
+
+                    <p class="font-extrabold text-gray-600 text-l pb-9">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto autem veniam qui labore eveniet suscipit maiores a, architecto incidunt vitae accusamus sapiente voluptate voluptatem consequuntur quod, quidem nobis, sit quas?
+                    </p>
+
+                </div>
+            </div>
         
     
 
@@ -127,6 +150,7 @@
             </div>
         </div>
     </main>
+    <br><br><br>
 
     
 </section>
