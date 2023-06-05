@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
-use Cviebrock\EloquentsSluggable\Services\Sluggable;
-
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class ProductsController extends Controller
 {
@@ -42,18 +41,29 @@ class ProductsController extends Controller
 
         $newImageName = uniqid() . '-' . $request->title . '.' . $request->image->extension();
 
-       $request->image->move(public_path('img'), $newImageName);
+       $request->image->move(public_path('images'), $newImageName);
 
        $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
+
+       Post::create([
+            'title' => $request->input('title'),
+            'description' => $request->input('description'),
+            'slug' => SlugService::createSlug(Post::class, 'slug', $request->title),
+            'image_path' => $newImageName,
+            'user_id' => auth()->user()->id
+       ]);
+
+       return redirect('/products')->with('message', 'Your post has been created!!');
 
     }
 
     /**
      * Display the specified resource.
+     * @param string $slug
      */
-    public function show(string $id)
+    public function show($slug)
     {
-        //
+        return view('features.show')->with('post', Post::where('slug', $slug)->first());
     }
 
     /**

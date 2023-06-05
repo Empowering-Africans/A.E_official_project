@@ -40,10 +40,8 @@ Route::get('/sales', [SalesController::class, 'index'])->name('sales');
 Route::get('/available', [BuyingController::class, 'index'])->name('available');
 
 
-# 
-Route::middleware('auth')->group(function () {
-    Route::get('/products/create', [ProductsController::class, 'create']);
-});
+#  For creating a POST
+Route::post('/products/create', [ProductsController::class, 'ProductsController@create']);
 
 
 

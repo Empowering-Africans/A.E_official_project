@@ -23,7 +23,7 @@
         @endif
 
         <div class="w-4/5 m-auto pt-20">
-            <form action="/products" method="POST" enctype="multipart/form-data">
+            <form method="POST" action="/products"  enctype="multipart/form-data">
                 @csrf
 
                 <input type="text" name="title" placeholder="Title...." class="bg-transparent block border-b-2 w-full h-20 text-6xl outline-none"><br><br>

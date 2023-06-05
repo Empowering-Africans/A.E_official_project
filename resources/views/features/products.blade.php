@@ -17,6 +17,19 @@
 
      {{-- To check it actually display's it  {{ $posts }} --}}
 
+    @if (session()->has('message'))
+        <div class="pt-15 w-4/5 text-center m-auto"
+                style="margin-left: 24px; margin-bottom: 20px; padding-top: 14px; background-color: green; width: 15%; border-radius: 20px; font-size: 10px;">
+                <br>
+                <p>
+                    {{ session()->get('message') }}
+                </p>
+        </div>
+        
+    @endif
+
+
+
     @if (Auth::check())
         <div class="pt-15 w-4/5 text-center m-auto"
             style="margin-left: 24px; margin-bottom: 20px; padding-top: 14px; background-color: blue; width: 15%; border-radius: 20px; font-size: 10px;">
