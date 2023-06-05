@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
+use Cviebrock\EloquentsSluggable\Services\Sluggable;
+
 
 class ProductsController extends Controller
 {
@@ -11,7 +14,11 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view('features.products');
+        # $post = Post::all();
+        # Check if the model works using this---->>>  dd($post);
+        return view('features.products')
+            ->with('posts', Post::orderBy('updated_at', 'DESC')
+            ->get());
     }
 
     /**
@@ -19,7 +26,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        return view('products.create');
     }
 
     /**
@@ -27,7 +34,18 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'image' => 'required|mimes:jpg,png,jpeg|max:5048'
+        ]);
+
+        $newImageName = uniqid() . '-' . $request->title . '.' . $request->image->extension();
+
+       $request->image->move(public_path('img'), $newImageName);
+
+       $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
+
     }
 
     /**

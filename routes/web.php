@@ -39,6 +39,14 @@ Route::get('/products', [ProductsController::class, 'index'])->name('products');
 Route::get('/sales', [SalesController::class, 'index'])->name('sales');
 Route::get('/available', [BuyingController::class, 'index'])->name('available');
 
+
+# 
+Route::middleware('auth')->group(function () {
+    Route::get('/products/create', [ProductsController::class, 'create']);
+});
+
+
+
 # For the features of the web application
 // Route::resources([
 //     'products', ProductsController::class,

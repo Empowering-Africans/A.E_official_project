@@ -6,29 +6,23 @@
                         <ul class="py-4 sm:text-s pt-4 text-gray-400 ">
                             <li class="">
                                 <a class="text-center" href=" {{ route('dashboard') }}">
-                                    Dashboard
+                                    Dashboard  
                                 </a>
-                                
+                                ||
                                 <a href="{{ route('products') }}">
                                     My products
                                 </a> 
-                                
+                                ||
                                 <a href="{{ route('sales') }}">
                                     Sold products
-                                </a>
-                    
-                                <a href="{{ route('available') }}">
-                                    Available for sale
-                                </a>
-                    
-                                
+                                </a> 
                             </li>
                         </ul>
                     </div>
                 </div>
         </div>
     <p class="text-center w-25 w-4/5 pb-3 m-auto text-xs text-gray-100 pt-6">
-        Copyright 2021-2023 Praisebuka. All Rights Reserved
+        Copyright 2021-2023 Praise Ebuka. All Rights Reserved
     </p>
 </footer>
 

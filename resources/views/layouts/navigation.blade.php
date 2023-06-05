@@ -21,9 +21,6 @@
                     <x-nav-link :href="route('sales')" :active="request()->routeIs('sales')">
                         {{ __('Sold products') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('available')" :active="request()->routeIs('available')">
-                        {{ __('Avalable products for sale') }}
-                    </x-nav-link>
                 </div>
             </div>
 
@@ -51,9 +48,6 @@
                         </x-dropdown-link>
                         <x-dropdown-link :href="route('sales')">
                             {{ __('Sold products') }}
-                        </x-dropdown-link>
-                        <x-dropdown-link :href="route('available')">
-                            {{ __('Available products for sale') }}
                         </x-dropdown-link>
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}

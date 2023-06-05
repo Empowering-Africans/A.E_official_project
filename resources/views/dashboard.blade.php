@@ -1,34 +1,79 @@
 <x-app-layout><br>
-    
+        {{-- The title section --}}
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
         
-            <b> <h2 style="font-size: 2rem; color: white;">
-                {{ Auth::user()->name }}'s {{ __('Dashboard') }}
-            </h2></b> <br>
-
-            
-            <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
-                <div>
-                    <img src="/img/drone.jpg" width="400" alt="drone and land image">
-                </div>
-
-                <div class="m-auto sm:m-auto text-left w-4/5 block">
-                    <h2 class="text-4xl font-extrabold text-gray-600">
-                        Struggling to be a better developer?
-                    </h2>
-
-                    <p class="py-8 text-gray-500 text-l">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                         Voluptatibus
-                    </p>
-
-                    <p class="font-extrabold text-gray-600 text-l pb-9">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto autem veniam qui labore eveniet suscipit maiores a, architecto incidunt vitae accusamus sapiente voluptate voluptatem consequuntur quod, quidem nobis, sit quas?
-                    </p>
-
+                    <b> 
+                    <h2>
+                        {{ Auth::user()->name }}'s {{ __('Dashboard') }}
+                    </h2></b>
                 </div>
             </div>
-        
+        </div>
+    </div>
+
+            
+    <div class="max-w-5xl sm:px-6 lg:px-8">
+
+        <div class="bg-white shadow-sm sm:rounded-lg">
+            <div class="p-6 text-gray-900">
     
+            <div class="sm:grid grid-cols-4 gap-20 w-4/5 py-15 border-gray-200">
+                
+                    <img src="/img/farmers.jpg" width="400" style="border-radius: 20px; margin-bottom: 30px;" alt="farmers">
+                
+            </div>
+            <div style="padding-left: 2px; padding-top: -10px; margin-left: 45%; margin-top: -20%;">
+                <b> <h2 style="font-size: 20px; " class="text-gray-700 font-bold text-7xl pb-4">
+                     What is Agroculture?.
+                 </h2> </b>
+                <br><br>
+                 <p class="text-xl text-gray-700  leading-8 font-light"
+                     style="padding-bottom: 30px;">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facilis, iste quisquam ratione tempore, maiores possimus nemo veritatis consequatur aspernatur tenetur similique voluptates placeat quos exercitationem velit tempora pariatur quo.
+                 </p>
+     
+             </div>
+            </div>
+        
+            </div>
+    </div>  
+<br>
+
+
+    <div class="max-w-5xl sm:px-6 lg:px-8">
+
+        <div class="bg-white shadow-sm sm:rounded-lg">
+            <div class="p-6 text-gray-900">
+    
+            <div class="sm:grid grid-cols-4 gap-20 w-4/5 py-15 border-gray-200">
+                
+                    <img src="/img/tracktor.jpg" width="400" style="border-radius: 20px; margin-bottom: 30px;" alt="tracktor">
+                
+            </div>
+            <div style="padding-left: 2px; padding-top: -10px; margin-left: 45%; margin-top: -20%;">
+                <b> <h2 style="font-size: 20px; " class="text-gray-700 font-bold text-7xl pb-4">
+                     The Agricultural System.
+                 </h2> </b>
+                <br><br>
+                 <p class="text-xl text-gray-700  leading-8 font-light"
+                     style="padding-bottom: 30px;">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facilis, iste quisquam ratione tempore, maiores possimus nemo veritatis consequatur aspernatur tenetur similique voluptates placeat quos exercitationem velit tempora pariatur quo.
+                 </p>
+     
+             </div>
+            </div>
+        
+            </div>
+    </div>
+    
+
+
+
+
 
 
     <!-- CONTENT -->
