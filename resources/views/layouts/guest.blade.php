@@ -36,7 +36,7 @@
                 </a>
             </div><br>
 
-            <b> <h1 style="font-size: 30px;"> Welcome to Alpha and Echo's Project</h1> </b>
+            <b> <h1 style="font-size: 30px;"> Welcome to Echo's App Project</h1> </b>
 
             <div class="w-full sm:max-w-md mt-6 px-6 py-4  shadow-md bg-white-900 overflow-hidden text-black-500 sm:rounded-lg">
                 {{ $slot }}

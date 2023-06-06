@@ -1,7 +1,7 @@
 <x-guest-layout><br>
     {{-- The title section --}}
 
-        <div class="w-4/5 m-auto text-center">
+        <div class="w-4/5 m-auto text-center" >
             <div class="py-15">        
                     <b><h1 class="text-6xl">
                         Create a Product
@@ -23,7 +23,7 @@
         @endif
 
         <div class="w-4/5 m-auto pt-20">
-            <form method="POST" action="/products"  enctype="multipart/form-data">
+            <form method="head" action="/products"  enctype="multipart/form-data">
                 @csrf
 
                 <input type="text" name="title" placeholder="Title...." class="bg-transparent block border-b-2 w-full h-20 text-6xl outline-none"><br><br>
