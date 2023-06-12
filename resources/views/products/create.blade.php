@@ -23,9 +23,9 @@
         @endif
 
         <div class="w-4/5 m-auto pt-20">
-            <form method="head" action="/products"  enctype="multipart/form-data">
+            <form method="POST" action="/products"  enctype="multipart/form-data">
                 @csrf
-
+@method('post')
                 <input type="text" name="title" placeholder="Title...." class="bg-transparent block border-b-2 w-full h-20 text-6xl outline-none"><br><br>
                 <div class="w-4/5 m-auto text-left">       
                             <b>

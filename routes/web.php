@@ -41,7 +41,9 @@ Route::get('/available', [BuyingController::class, 'index'])->name('available');
 
 
 #  For creating a POST
-// Route::resource('products', ProductsController::class);
+
+Route::post('products', [ProductsController::class, 'store']);
+Route::resource('products', ProductsController::class);
 
 
 # For the features of the web application
